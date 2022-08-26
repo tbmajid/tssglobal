@@ -90,17 +90,14 @@ const ContactForm = () => {
   };
   return formSubmitted.title === "" ? (
     <div>
-      <Typography gutterBottom variant="h3" align="center">
-        Contact Us
-      </Typography>
       {!showCaptcha ? (
         <Grid>
           <Card
-            style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}
+            style={{ maxWidth: 850, padding: "20px 5px", margin: "0 auto" }}
           >
             <CardContent>
               <Typography gutterBottom variant="h5">
-                Contact Us
+                Make an enquiry
               </Typography>
               <Typography
                 variant="body2"
@@ -177,7 +174,7 @@ const ContactForm = () => {
       ) : (
         <Grid>
           <Card
-            style={{ maxWidth: 450, padding: "20px 5px", margin: "0 auto" }}
+            style={{ maxWidth: 750, padding: "20px 5px", margin: "0 auto" }}
           >
             <CardContent>
               <ReCAPTCHA

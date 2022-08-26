@@ -1,6 +1,7 @@
 import { useQuery } from "urql";
 import { GET_POST_QUERY } from "../../lib/query";
 import { useRouter } from "next/router";
+import { Box } from "@mui/material";
 
 const myPosts = () => {
   //Fetch Slug
@@ -21,13 +22,15 @@ const myPosts = () => {
   console.log(data);
   return (
     <div>
-      <h1>{title}</h1>
-      <p>{date}</p>
+      <Box sx={{ typography: "h3", p: 2, margin: 2 }}>{title}</Box>
+      <Box sx={{ typography: "body1", p: 2, margin: 2 }}>
+        <p>{date}</p>
 
-      <p>{body}</p>
-      <p>
-        <img src={media.data.attributes.formats.small.url} alt={title} />
-      </p>
+        <p>{body}</p>
+        <p>
+          <img src={media.data.attributes.formats.small.url} alt={title} />
+        </p>
+      </Box>
     </div>
   );
 };

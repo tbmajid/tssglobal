@@ -1,21 +1,20 @@
 //Material UI
 import * as React from "react";
-import Container from "@mui/material/Container";
+
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import { Grid, useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 //END OF MATERIAL UI
 import { useQuery } from "urql";
 import { POST_QUERY } from "../lib/query";
 import Posts from "../components/Posts";
-import Link from "next/link";
+
 import Hero from "../components/Hero";
 import Homecontent from "../components/Homepagemain";
 import { PostGrid } from "../styles/HPGrid";
 import MinimizeIcon from "@mui/icons-material/Minimize";
 import HomeIntro from "../components/HomeIntroSection";
 import WhyUs from "../components/WhyUs";
-import Footer from "../components/Footer";
 
 export default function Home() {
   //MediaQuery
@@ -58,7 +57,6 @@ export default function Home() {
         </Typography>
       </Box>
       <WhyUs />
-      <Footer />
     </div>
 
     // {posts.map((post) => (

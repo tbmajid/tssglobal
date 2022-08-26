@@ -12,10 +12,12 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import HamburgerMenu from "./Hamburger.js";
 import CloseIcon from "@mui/icons-material/Close";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MenuItem from "@mui/material/MenuItem";
 import { myMenu } from "./MenuList.js";
 import Link from "next/link";
 import { ChildrenDetect } from "./utils";
+import { SubCheck } from "./Subcheck.js";
 import IconButton from "@mui/material/IconButton";
 import ListSubheader from "@mui/material/ListSubheader";
 import Image from "next/image.js";
@@ -23,12 +25,13 @@ import { useRouter } from "next/router";
 
 const ResponsiveAppBar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-
+  const router = useRouter();
   //MUI theme for menu buttons
 
   return (
     <AppBar
       position="static"
+      elevation={0}
       sx={{ color: "#022366", backgroundColor: "#ffffff" }}
     >
       <Container maxWidth="xl">
@@ -67,11 +70,6 @@ const ResponsiveAppBar = () => {
                 sx={{
                   minWidth: 300,
                 }}
-                subheader={
-                  <ListSubheader component="div" id="nested-list-subheader">
-                    Navigation
-                  </ListSubheader>
-                }
               ></List>
               <HamburgerMenu />{" "}
             </Drawer>
@@ -115,7 +113,15 @@ const ResponsiveAppBar = () => {
 };
 
 const ItemSelect = ({ item }) => {
-  const Component = ChildrenDetect(item) ? MultiLevel : SingleLevel;
+  let Component;
+  if (ChildrenDetect(item)) {
+    Component = MultiLevel;
+  } else if (SubCheck(item)) {
+    Component = DoubleLevel;
+  } else {
+    Component = SingleLevel;
+  }
+
   return <Component item={item} />;
 };
 const SingleLevel = ({ item }) => {
@@ -142,27 +148,34 @@ const SingleLevel = ({ item }) => {
 
 const MultiLevel = ({ item }) => {
   const { submenu: children } = item;
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+
+  const router = useRouter();
+
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleCloseNavMenu = () => {
     setAnchorEl(null);
   };
-  const router = useRouter();
+  //check whether the page is active
+  const active = (element) => router.pathname == element.plink;
+
   return (
     <React.Fragment>
       <Button
         id="basic-button"
         aria-controls={open ? "basic-menu" : undefined}
-        className={router.pathname == item.plink ? "selected" : ""}
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         sx={{ my: 2, color: "#022366", fontWeight: "bold", display: "block" }}
       >
-        {item.title}
+        <nav className={item.submenu.some(active) ? "selected" : ""}>
+          {item.title}
+        </nav>
       </Button>
       <Menu
         id="basic-menu"
@@ -174,12 +187,7 @@ const MultiLevel = ({ item }) => {
         }}
       >
         {children.map((child, key) => (
-          <MenuItem
-            key={key}
-            item={child}
-            onClick={handleCloseNavMenu}
-            sx={{ color: "white", backgroundColor: "#022366" }}
-          >
+          <MenuItem key={key} item={child} onClick={handleCloseNavMenu}>
             <Link href={child.plink}>
               <div>
                 <a>{child.title}</a>
@@ -191,4 +199,58 @@ const MultiLevel = ({ item }) => {
     </React.Fragment>
   );
 };
+
+const DoubleLevel = ({ item }) => {
+  const { submenu: children } = item;
+
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+
+  const router = useRouter();
+
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleCloseNavMenu = () => {
+    setAnchorEl(null);
+  };
+  //check whether the page is active
+  const active = (element) => router.pathname == element.plink;
+  return (
+    <React.Fragment>
+      <Button
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+        sx={{ my: 2, color: "#022366", fontWeight: "bold", display: "block" }}
+      >
+        <nav className={item.submenu.some(active) ? "selected" : ""}>
+          {item.title}
+        </nav>
+      </Button>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleCloseNavMenu}
+        MenuListProps={{
+          "aria-labelledby": "basic-button",
+        }}
+      >
+        {children.map((child, key) => (
+          <MenuItem key={key} item={child} onClick={handleCloseNavMenu}>
+            <Link href={child.plink}>
+              <div>
+                <a>{child.title}</a>
+              </div>
+            </Link>
+          </MenuItem>
+        ))}
+      </Menu>
+    </React.Fragment>
+  );
+};
+
 export default ResponsiveAppBar;

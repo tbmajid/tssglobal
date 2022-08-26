@@ -57,3 +57,8 @@ export const MainContainer = styled.div`
 export const DropShadow = styled.div`
   filter: drop-shadow(10px 10px 0 #253ebb);
 `;
+
+export const Map = styled.div`
+  height: 50%;
+  width: 50%;
+`;

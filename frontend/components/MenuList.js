@@ -12,27 +12,39 @@ export const myMenu = [
     title: "Services",
     plink: "/services",
     submenu: [
-      { title: "Bespoke Consultation", plink: "/bespoke-consultation" },
-      { title: "UK University Admission", plink: "/uk-university-admission" },
-      { title: "Student Visa Support", plink: "/student-visa-support" },
-      { title: "IELTS Examp Preparation", plink: "/ielts-coaching" },
+      {
+        title: "Bespoke Consultation",
+        plink: "/services/bespoke-consultation",
+      },
+      {
+        title: "UK University Admission",
+        plink: "/services/uk-university-admission",
+      },
+      {
+        title: "Student Visa Support",
+        plink: "/services/student-visa-support",
+      },
+      { title: "IELTS Examp Preparation", plink: "/services/ielts-coaching" },
       {
         title: "Personal Statement Editing",
-        plink: "/personal-statement-editing-service",
+        plink: "/services/personal-statement-editing-service",
       },
-      { title: "Post Arrival Support", plink: "/post-arrival-support" },
+      {
+        title: "Post Arrival Support",
+        plink: "/services/post-arrival-support",
+      },
     ],
   },
   {
-    title: "blog",
+    title: "Blog",
     plink: "/postlist",
   },
   {
-    title: "contact",
+    title: "Contact",
     plink: "/contact",
     submenu: [
-      { title: "London Head Office", plink: "/london" },
-      { title: "Sylhet Office", plink: "/sylhet" },
+      { title: "London Head Office", plink: "/contact/london" },
+      { title: "Sylhet Office", plink: "/contact/sylhet" },
     ],
   },
 ];

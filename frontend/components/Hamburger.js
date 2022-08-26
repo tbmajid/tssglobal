@@ -13,21 +13,36 @@ import CloseIcon from "@mui/icons-material/Close";
 import { myMenu } from "./MenuList";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { ChildrenDetect } from "./utils";
+import { SubCheck } from "./Subcheck.js";
 
 const HamburgerMenu = () => {
   return myMenu.map((item, key) => <MenuItem key={key} item={item} />);
 };
 
 const MenuItem = ({ item }) => {
-  const Component = ChildrenDetect(item) ? MultiLevel : SingleLevel;
+  let Component;
+  if (ChildrenDetect(item)) {
+    Component = MultiLevel;
+  } else if (SubCheck(item)) {
+    Component = DoubleLevel;
+  } else {
+    Component = SingleLevel;
+  }
+
   return <Component item={item} />;
 };
 
 const SingleLevel = ({ item }) => {
   return (
     <ListItem button>
-      <ListItemText primary={item.title} />
+      <Link href={item.plink}>
+        <ListItemText
+          primary={item.title}
+          sx={{ textTransform: "uppercase" }}
+        />
+      </Link>
     </ListItem>
   );
 };
@@ -39,11 +54,54 @@ const MultiLevel = ({ item }) => {
   const handleClick = () => {
     setOpen((prev) => !prev);
   };
-
+  //check whether the page is active
+  const active = (element) => router.pathname == element.plink;
+  const router = useRouter();
   return (
     <React.Fragment>
       <ListItem button onClick={handleClick}>
-        <ListItemText primary={item.title} />
+        <ListItemText
+          className={item.submenu.some(active) ? "selected" : ""}
+          primary={item.title}
+          sx={{ textTransform: "uppercase" }}
+        />
+        {open ? <ExpandLess /> : <ExpandMore />}
+      </ListItem>
+      <Collapse in={open} timeout="auto" unmountOnExit>
+        <List
+          component="div"
+          disablePadding
+          sx={{ color: "white", backgroundColor: "#022366" }}
+        >
+          {children.map((child, key) => (
+            <Link href={child.plink} key={key}>
+              <MenuItem key={key} item={child} />
+            </Link>
+          ))}
+        </List>
+      </Collapse>
+    </React.Fragment>
+  );
+};
+
+const DoubleLevel = ({ item }) => {
+  const { submenu: children } = item;
+  const [open, setOpen] = useState(false);
+
+  const handleClick = () => {
+    setOpen((prev) => !prev);
+  };
+  //check whether the page is active
+  const router = useRouter();
+  const active = (element) => router.pathname == element.plink;
+  return (
+    <React.Fragment>
+      <ListItem button onClick={handleClick}>
+        <ListItemText
+          className={item.submenu.some(active) ? "selected" : ""}
+          sx={{ textTransform: "uppercase" }}
+          primary={item.title}
+        />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItem>
       <Collapse in={open} timeout="auto" unmountOnExit>

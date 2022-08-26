@@ -9,7 +9,7 @@ export const ChildrenDetect = (item) => {
     return false;
   }
 
-  if (children.length === 0) {
+  if (children.length < 3) {
     return false;
   }
 

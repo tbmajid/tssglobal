@@ -3,14 +3,21 @@
   margin: 0;
   padding: 0;
 }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 a {
-  color: inherit;
+  color: #022366;
   text-decoration: none;
 }
 
 a:hover {
-  color: #cef872;
-  text-decoration: underline overline;
+  text-decoration: underline;
 }
 
 .MuiBox-root.css-1t6c9ts a {
@@ -24,7 +31,5 @@ a:hover {
 }
 
 .selected {
-  color: aqua;
-
   text-decoration: underline overline;
 }

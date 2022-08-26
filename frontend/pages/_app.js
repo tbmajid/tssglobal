@@ -10,6 +10,7 @@ import theme from "../src/theme";
 import createEmotionCache from "../src/createEmotionCache";
 import { Provider, createClient } from "urql";
 import ResponsiveAppBar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const client = createClient({ url: process.env.NEXT_PUBLIC_BACKEND_API });
 
@@ -60,6 +61,7 @@ const MyApp = (props) => {
         <Provider value={client}>
           <ResponsiveAppBar />
           <Component {...pageProps} />
+          <Footer />
         </Provider>
       </ThemeProvider>
     </CacheProvider>
