@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  list-style: none;
 }
 
 html,
@@ -30,6 +31,11 @@ a:hover {
   text-decoration: underline overline;
 }
 
-.selected {
-  text-decoration: underline overline;
+button:disabled {
+  display: none;
+}
+
+.SearchT {
+  width: 3rem;
+  height: 3rem;
 }

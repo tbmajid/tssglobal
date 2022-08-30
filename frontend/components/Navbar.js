@@ -2,6 +2,7 @@ import * as React from "react";
 import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
+import Grid from "@mui/material";
 import Toolbar from "@mui/material/Toolbar";
 import { Drawer } from "@mui/material";
 import Menu from "@mui/material/Menu";
@@ -22,6 +23,7 @@ import IconButton from "@mui/material/IconButton";
 import ListSubheader from "@mui/material/ListSubheader";
 import Image from "next/image.js";
 import { useRouter } from "next/router";
+import Search from "./search.js";
 
 const ResponsiveAppBar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -107,6 +109,14 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
         </Toolbar>
+        <Box
+          display="flex"
+          justifyContent="flex-end"
+          alignItems="flex-end"
+          sx={{ typography: "body1", mb: 2 }}
+        >
+          <Search />
+        </Box>
       </Container>
     </AppBar>
   );
