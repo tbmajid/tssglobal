@@ -1,10 +1,12 @@
 import PageHero from "../components/PageHero";
 import { Box } from "@mui/material";
+import NewsletterSubscribe from "../components/NewsletterSubscribe";
 
 const about = () => {
   return (
     <div>
       <PageHero title="About Us" />
+      <NewsletterSubscribe />
       <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
         We are a professional student recruitment and training company providing
         students and parents with current information about studies offered in

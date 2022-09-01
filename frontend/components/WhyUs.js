@@ -127,7 +127,7 @@ const WhyUs = () => {
         <Box>
           <Button
             variant="outlined"
-            sx={{ color: "white", borderColor: "white", pl: 1 }}
+            sx={{ color: "white", borderColor: "white", p: 1, m: 2 }}
           >
             Find out more
           </Button>

@@ -15,7 +15,7 @@ const Homecontent = () => {
         direction={largeScreen ? "row" : "column"}
         aligItem="center"
         justifyContent="center"
-        spacing={3}
+        spacing={largeScreen ? 3 : 0}
         sx={{ p: 1 }}
       >
         <Address>
