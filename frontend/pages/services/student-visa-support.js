@@ -6,33 +6,61 @@ const StudentVisaSupport = () => {
     <div>
       <PageHero title="Student Visa Support" />
       <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        We are a professional student recruitment and training company providing
-        students and parents with current information about studies offered in
-        the United Kingdom. Our Services offer information about the
-        universities, programmes, admissions, accommodations and student visas.
+        TSS Global consultants have extensive knowledge of the latest
+        immigration legislation, rules and regulations. We continuously monitor
+        Student Visa changes so we can brief our students about issues that may
+        affect their admission at the earliest possible stage.
       </Box>
       <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        TSS Global head office is based in London but our global reach allows us
-        to provide onshore support to students wherever they are in the world by
-        remote support.
+        Our Visa Service offers advice and assistance to international students
+        wishing to obtain a UK visa, specialising in:
       </Box>
       <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        Education is the foundation on which careers are built. TSS Global guide
-        and assist students in achieving their goal to pursue overseas education
-        courses and degrees in universities in the United Kingdom. Accomplishing
-        the goal of overseas education is becoming increasingly challenging each
-        year due to a rapidly growing applicant pool. We help students take a
-        more holistic approach to the application process and present themselves
-        in a unique and compelling manner augmenting chances of success.
+        Student visa Entry Clearance
+        <br />
+        Student visa Leave to Remain
+        <br />
+        Student Dependant Visa
+        <br />
+        Student Visitor Visas
+        <br />
+        Child Student Visa
+        <br />
       </Box>
-
+      <Box sx={{ typography: "h5", p: 2, margin: 2 }}>
+        Requirements for Student Visa
+      </Box>{" "}
       <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        We strive to make the admissions process less stressful for the students
-        and their families, by guidance through each step of the admissions
-        process and providing them with a personalised strategy for success. We
-        help build confidence and skills in our students. Our mission is to help
-        them achieve their highest potential, now and in the future.
-      </Box>
+        In order to qualify for a Student route visa (formally Tier 4 General)
+        the applicant must be able to demonstrate that:
+      </Box>{" "}
+      <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
+        they have been offered a place on a course;
+        <br />
+        the course is with a licensed sponsor and they have been assigned a
+        confirmation of acceptance for studies document (‘CAS’);
+        <br />
+        they can speak, read, write and understand English to a required
+        standard;
+        <br />
+        they meet the finance requirements issued by the Home Office; and
+        <br />
+        they do not fall for refusal under the general grounds for refusal.
+        <br />
+      </Box>{" "}
+      <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
+        Applicants will be given leave for the duration of their course, with
+        extra time to settle in and manage their affairs at the start and end of
+        the course. It’s possible that applicants will be able to extend their
+        leave or apply for new leave. Only under exceptional cases can those who
+        have previously studied in the UK be given additional leave.
+      </Box>{" "}
+      <Box sx={{ typography: "h6", p: 2, margin: 2, mb: 4 }}>
+        We have extensive experience preparing student visa applications and can
+        provide you with professional advice and assistance in the process. We
+        can also help those who want to pursue their post-study options in order
+        to stay in the UK once they completed their courses.
+      </Box>{" "}
     </div>
   );
 };

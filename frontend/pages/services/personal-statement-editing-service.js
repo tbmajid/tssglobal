@@ -6,32 +6,22 @@ const PersonalStatementEditing = () => {
     <div>
       <PageHero title="Personal Statement Editing" />
       <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        We are a professional student recruitment and training company providing
-        students and parents with current information about studies offered in
-        the United Kingdom. Our Services offer information about the
-        universities, programmes, admissions, accommodations and student visas.
+        A strong personal statement should be straightforward and succinct in
+        describing your qualities, skills, experience, and goals. It should, of
+        course, be absolutely free of errors. That’s where our professional
+        personal statement editing services come in, giving your application the
+        extra boost it needs.
       </Box>
       <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        TSS Global head office is based in London but our global reach allows us
-        to provide onshore support to students wherever they are in the world by
-        remote support.
+        Our consultants understand the importance of a well-written personal
+        statement. They’re also experts at correcting and enhancing written
+        English, so we can help you make the best first impression possible in
+        your submission.
       </Box>
-      <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        Education is the foundation on which careers are built. TSS Global guide
-        and assist students in achieving their goal to pursue overseas education
-        courses and degrees in universities in the United Kingdom. Accomplishing
-        the goal of overseas education is becoming increasingly challenging each
-        year due to a rapidly growing applicant pool. We help students take a
-        more holistic approach to the application process and present themselves
-        in a unique and compelling manner augmenting chances of success.
-      </Box>
-
-      <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
-        We strive to make the admissions process less stressful for the students
-        and their families, by guidance through each step of the admissions
-        process and providing them with a personalised strategy for success. We
-        help build confidence and skills in our students. Our mission is to help
-        them achieve their highest potential, now and in the future.
+      <Box sx={{ typography: "h6", p: 2, margin: 2, mb: 4 }}>
+        There is no question about the quality of the administration that we
+        provide to students and working professionals who wish to be led for a
+        bright future with the extensive assistance of our expert counsellors.
       </Box>
     </div>
   );

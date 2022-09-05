@@ -61,7 +61,9 @@ const NewsletterForm = ({ status, message, onValidated }) => {
 
   return (
     <>
-      <Typography>Join our newsletter for latest updates</Typography>
+      <Typography textAlign="center">
+        Join our newsletter for latest updates
+      </Typography>
       <Box
         display="flex"
         justifyContent="flex-ends"

@@ -4,7 +4,7 @@ import SchoolIcon from "@mui/icons-material/School";
 import ApprovalIcon from "@mui/icons-material/Approval";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 
-import { Address, PhoneEmail, OpeningHours } from "../styles/HPGrid";
+import { Address, PhoneEmail, OpeningHours } from "../../styles/HPGrid";
 const Homecontent = () => {
   const largeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
   return (

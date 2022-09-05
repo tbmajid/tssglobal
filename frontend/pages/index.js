@@ -9,14 +9,14 @@ import { useQuery } from "urql";
 import { POST_QUERY } from "../lib/query";
 import Posts from "../components/Posts";
 
-import Hero from "../components/Hero";
-import Homecontent from "../components/Homepagemain";
+import Hero from "../components/Homepage/Hero";
+import Homecontent from "../components/Homepage/Homepagemain";
 import { PostGrid } from "../styles/HPGrid";
 import MinimizeIcon from "@mui/icons-material/Minimize";
-import HomeIntro from "../components/HomeIntroSection";
-import WhyUs from "../components/WhyUs";
+import HomeIntro from "../components/Homepage/HomeIntroSection";
+import WhyUs from "../components/Homepage/WhyUs";
 
-export default function Home() {
+const Home = () => {
   //MediaQuery
   const largeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
   //Fetch data from Strapi
@@ -40,6 +40,8 @@ export default function Home() {
           sx={{
             color: "#4731d4",
             pl: 2,
+            ml: 3,
+            mt: 5,
             fontWeight: "bold",
             letterSpacing: 5,
             textTransform: "uppercase",
@@ -48,7 +50,7 @@ export default function Home() {
           <MinimizeIcon fontSize="small" />
           Latest From Our Blog
         </Typography>
-        <Typography variant="h6" component="h1" gutterBottom>
+        <Typography variant="body1" component="h1" gutterBottom sx={{ ml: 3 }}>
           <PostGrid>
             {posts.map((post) => (
               <Posts key={post.id} post={post} />
@@ -58,15 +60,7 @@ export default function Home() {
       </Box>
       <WhyUs />
     </div>
-
-    // {posts.map((post) => (
-    //   <Posts key={post.id} post={post} />
-    // ))}
-    // <p>
-    //   <Link href={`/postlist`}>
-    //     <a>All Posts</a>
-    //   </Link>
-    // </p>
-    // </div>
   );
-}
+};
+
+export default Home;

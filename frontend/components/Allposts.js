@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ResponsiveAppBar from "./Navbar";
+import { Typography } from "@mui/material";
 
 const AllPosts = ({ post }) => {
   //Get data from props
@@ -9,11 +9,14 @@ const AllPosts = ({ post }) => {
     <div>
       <Link href={`/posts/${slug}`}>
         <a>
-          <h1>{title}</h1>
+          <Typography variant="h3">{title}</Typography>
         </a>
       </Link>
-      <p>{date}</p>
-      <p> {description}</p>
+      <Typography variant="body1">{date}</Typography>
+      <Typography variant="h6" sx={{ mb: 6 }}>
+        {" "}
+        {description}
+      </Typography>
     </div>
   );
 };

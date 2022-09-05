@@ -6,7 +6,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import SearchIcon from "@mui/icons-material/Search";
 import HouseIcon from "@mui/icons-material/House";
 import MinimizeIcon from "@mui/icons-material/Minimize";
-import { WhyUsGrid } from "../styles/HPGrid";
+import { WhyUsGrid } from "../../styles/HPGrid";
 
 const WhyUs = () => {
   return (
@@ -22,13 +22,14 @@ const WhyUs = () => {
           textTransform: "uppercase",
           marginTop: 4,
           pl: 2,
+          ml: 3,
         }}
       >
         <MinimizeIcon fontSize="small" />
         Why Us
       </Typography>
       <Box
-        sx={{ color: "white", backgroundColor: "#4731d4", marginTop: 4, p: 2 }}
+        sx={{ color: "white", backgroundColor: "#4731d4", marginTop: 4, p: 4 }}
       >
         <WhyUsGrid>
           <Grid item sx={{ border: 1, p: 4 }}>

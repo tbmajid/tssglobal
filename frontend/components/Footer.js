@@ -1,4 +1,4 @@
-import { Box, Grid, useMediaQuery } from "@mui/material";
+import { Box, Grid, useMediaQuery, Typography } from "@mui/material";
 import NewsletterSubscribe from "./NewsletterSubscribe";
 
 const Footer = () => {
@@ -9,9 +9,25 @@ const Footer = () => {
       <Grid
         container
         spacing={3}
-        justifyContent="flex-end"
-        sx={{ p: 2, color: "white", backgroundColor: "#022366" }}
+        direction={largeScreen ? "row" : "column"}
+        alignItems="center"
+        justifyContent={largeScreen ? "space-between" : "center"}
+        sx={{ p: 3, color: "white", backgroundColor: "#070d25" }}
       >
+        <Grid item alignItems="center">
+          <Typography
+            sx={{ fontSize: 12 }}
+            textAlign={largeScreen ? "left" : "center"}
+          >
+            53A Mile End Road,
+            <br />
+            London E1 4TT
+            <br />
+            Tel: 02070011176
+            <br />
+            Email: contact@tssglobal.co.uk
+          </Typography>
+        </Grid>
         <Grid item>
           <NewsletterSubscribe />
         </Grid>
@@ -19,14 +35,22 @@ const Footer = () => {
       <Grid
         container
         direction={largeScreen ? "row" : "column"}
-        aligItem="center"
-        justifyContent="space-between"
-        spacing={3}
-        sx={{ p: 2, color: "white", backgroundColor: "#022366" }}
+        justifyContent={largeScreen ? "space-between" : "center"}
+        alignItems="center"
+        spacing={largeScreen ? 0 : 0}
+        sx={{ color: "white", backgroundColor: "#070d25", p: 3 }}
       >
-        <Grid item>&copy; {new Date().getFullYear()} TSS Global Limited</Grid>
+        <Grid item>
+          <Typography sx={{ fontSize: 12 }}>
+            &copy; {new Date().getFullYear()} TSS Global Limited
+          </Typography>
+        </Grid>
 
-        <Grid item>Privacy Policy | Cookies Policy</Grid>
+        <Grid item>
+          <Typography sx={{ fontSize: 12 }}>
+            Privacy Policy | Cookies Policy
+          </Typography>
+        </Grid>
       </Grid>
     </div>
   );

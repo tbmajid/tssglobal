@@ -1,0 +1,73 @@
+import * as React from "react";
+import { useState } from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material";
+import Toolbar from "@mui/material/Toolbar";
+import { Drawer } from "@mui/material";
+
+import MenuIcon from "@mui/icons-material/Menu";
+import List from "@mui/material/List";
+
+import Button from "@mui/material/Button";
+import HamburgerMenu from "./Hamburger.js";
+import CloseIcon from "@mui/icons-material/Close";
+
+import Link from "next/link";
+
+import IconButton from "@mui/material/IconButton";
+
+import Image from "next/image.js";
+import { useRouter } from "next/router";
+
+const MobileMenu = () => {
+  const [openDrawer, setOpenDrawer] = useState(false);
+  const router = useRouter();
+  return (
+    <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+      <Box sx={{ p: 2 }}>
+        {" "}
+        <Link href="/">
+          <a>
+            <Image
+              src="/tss-logo.svg"
+              alt="logo"
+              width={150}
+              height={62}
+              quality={75}
+            />
+          </a>
+        </Link>
+      </Box>
+      <Drawer
+        anchor="right"
+        open={openDrawer}
+        onClose={() => setOpenDrawer(false)}
+      >
+        <Button
+          size="medium"
+          onClick={() => setOpenDrawer(!openDrawer)}
+          sx={{ marginLeft: "auto" }}
+        >
+          <CloseIcon />
+        </Button>
+        <List
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+          sx={{
+            minWidth: 300,
+          }}
+        ></List>
+        <HamburgerMenu />{" "}
+      </Drawer>
+      <IconButton
+        sx={{ color: "black", marginLeft: "auto" }}
+        onClick={() => setOpenDrawer(!openDrawer)}
+      >
+        <MenuIcon color="white" />
+      </IconButton>
+    </Box>
+  );
+};
+
+export default MobileMenu;

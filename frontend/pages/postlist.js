@@ -2,6 +2,7 @@ import { useQuery } from "urql";
 import { ALL_POST_QUERY } from "../lib/query";
 import AllPosts from "../components/Allposts";
 import PageHero from "../components/PageHero";
+
 import { Box } from "@mui/material";
 
 export default function PostList() {
@@ -16,7 +17,7 @@ export default function PostList() {
   return (
     <div>
       <PageHero title="Blog" />
-      <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
+      <Box sx={{ typography: "h6", p: 4, margin: 3 }}>
         {posts.map((post) => (
           <AllPosts key={post.id} post={post} sx={{ pb: 2 }} />
         ))}
