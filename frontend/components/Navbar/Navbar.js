@@ -12,7 +12,7 @@ import { ChildrenDetect } from "./utils";
 import { SubCheck } from "./Subcheck.js";
 
 import Image from "next/image.js";
-import Search from "../search.js";
+import SearchBar from "../Search.js";
 import Dropdown from "./Dropdown.js";
 import MobileMenu from "./Mobilemenu.js";
 import SingleLevelMenu from "./Singlelevelmenu.js";
@@ -60,7 +60,7 @@ const ResponsiveAppBar = () => (
         alignItems="flex-end"
         sx={{ typography: "body1", mb: 2 }}
       >
-        <Search />
+        <SearchBar />
       </Box>
     </Container>
   </AppBar>

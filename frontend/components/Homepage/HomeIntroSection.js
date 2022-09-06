@@ -61,7 +61,7 @@ const HomeIntro = () => {
         </Grid>
       </Grid>
 
-      <Grid container sx={{ justifyContent: "center", alignItems: "center" }}>
+      <Grid container sx={{ justifyContent: "flex-end" }}>
         <Box sx={{ maxWidth: 875, margin: 4 }}>
           <Grid item xs={1} md={1} sx={{ alignSelf: "end" }}>
             {" "}
