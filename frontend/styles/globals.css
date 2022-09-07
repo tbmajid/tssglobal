@@ -46,7 +46,3 @@ button:disabled {
 .selected {
   text-decoration: underline overline;
 }
-
-.InstantSearch {
-  border-color: #2843b8;
-}
