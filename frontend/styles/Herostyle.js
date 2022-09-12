@@ -6,7 +6,7 @@ export const HeroStyle = styled.div`
 `;
 
 export const BackgroundImage = styled.div`
-  background: url("https://tssglobal.74by4.com/wp-content/uploads/2021/04/9o8ydygtt64.jpg")
+  background: url("https://res.cloudinary.com/tabim/image/upload/v1662923781/TSS-Pages/hero-image_zroia6.jpg")
     0 0 no-repeat fixed;
 
   background-size: cover;

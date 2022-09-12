@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import GoogleMaps from "../../components/GoogleMap";
 import PageHero from "../../components/PageHero";
 import ContactForm from "../../components/Contact";
@@ -6,8 +6,8 @@ const London = () => {
   return (
     <div>
       <PageHero title="Contact Us" />
-      <Grid container spacing={2} sx={{ p: 2 }}>
-        <Grid item xs={3}>
+      <Grid container spacing={2} sx={{ p: 6 }}>
+        <Grid item md={3} xs={12}>
           <Typography sx={{ fontWeight: "bold" }}>
             53A Mile End Road, London E1 4TT{" "}
           </Typography>
@@ -15,11 +15,11 @@ const London = () => {
           Tel: 02070011176 <br />
           Email: contact@tssglobal.co.uk
         </Grid>
-        <Grid item xs={5}>
+        <Grid item md={5} xs={12}>
           <GoogleMaps />
         </Grid>
 
-        <Grid item xs={4}>
+        <Grid item md={4} xs={12} sx={{ p: 2, pl: 4 }}>
           Finding us in London As the world’s leading financial centre for
           international business, London needs little introduction. Our office
           is situated right in the heart of the capital allowing for easy access
@@ -40,7 +40,9 @@ const London = () => {
           </Typography>
         </Grid>
       </Grid>
-      <ContactForm />
+      <Box sx={{ pb: 2 }}>
+        <ContactForm />
+      </Box>
     </div>
   );
 };

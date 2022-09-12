@@ -7,7 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import HouseIcon from "@mui/icons-material/House";
 import MinimizeIcon from "@mui/icons-material/Minimize";
 import { WhyUsGrid } from "../../styles/HPGrid";
-
+import Link from "next/link";
 const WhyUs = () => {
   return (
     <div>
@@ -126,12 +126,20 @@ const WhyUs = () => {
           </Grid>
         </WhyUsGrid>
         <Box>
-          <Button
-            variant="outlined"
-            sx={{ color: "white", borderColor: "white", p: 1, m: 2 }}
-          >
-            Find out more
-          </Button>
+          <Link href="/services">
+            <Button
+              variant="outlined"
+              sx={{
+                color: "white",
+                borderColor: "white",
+                p: 1,
+                m: 2,
+                borderRadius: 0,
+              }}
+            >
+              Find out more
+            </Button>
+          </Link>
         </Box>
       </Box>
     </div>

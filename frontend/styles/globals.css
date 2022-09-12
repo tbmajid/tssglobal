@@ -10,8 +10,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  max-width: 100%;
   overflow-x: hidden;
+}
+
+.post-body p {
+  padding-bottom: 2rem;
 }
 
 a {
@@ -45,4 +48,8 @@ button:disabled {
 
 .selected {
   text-decoration: underline overline;
+}
+
+#basic-button a:hover {
+  background-color: white;
 }

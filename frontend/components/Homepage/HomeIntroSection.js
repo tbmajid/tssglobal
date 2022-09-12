@@ -51,7 +51,7 @@ const HomeIntro = () => {
           {" "}
           <DropShadow>
             <Image
-              src="https://tssglobal.74by4.com/wp-content/uploads/2021/05/homepage-advice.jpg"
+              src="https://res.cloudinary.com/tabim/image/upload/v1662933723/TSS-Pages/homepage-advice_a1b46y.jpg"
               alt="Counselling"
               width={300}
               height={200}
@@ -61,12 +61,12 @@ const HomeIntro = () => {
         </Grid>
       </Grid>
 
-      <Grid container sx={{ justifyContent: "flex-end" }}>
+      <Grid container justifyContent={largeScreen ? "flex-end" : "center"}>
         <Box sx={{ maxWidth: 875, margin: 4 }}>
           <Grid item xs={1} md={1} sx={{ alignSelf: "end" }}>
             {" "}
             <Image
-              src="https://tssglobal.74by4.com/wp-content/uploads/2022/07/studen-tes1.png"
+              src="https://res.cloudinary.com/tabim/image/upload/v1662923449/sakib_a3h1km.png"
               alt="Counselling"
               width={99}
               height={105}
@@ -75,7 +75,7 @@ const HomeIntro = () => {
           </Grid>
           <Grid
             item
-            xs={8}
+            xs={12}
             md={8}
             sx={{ typography: "body1", textAlign: "center" }}
           >

@@ -62,3 +62,7 @@ export const Map = styled.div`
   height: 50%;
   width: 50%;
 `;
+
+export const PostPadding = styled.p`
+  margin-bottom: 2rem;
+`;

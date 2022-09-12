@@ -1,9 +1,8 @@
 import * as React from "react";
 import { useState } from "react";
-import AppBar from "@mui/material/AppBar";
+
 import Box from "@mui/material/Box";
-import Grid from "@mui/material";
-import Toolbar from "@mui/material/Toolbar";
+
 import { Drawer } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
@@ -18,11 +17,10 @@ import Link from "next/link";
 import IconButton from "@mui/material/IconButton";
 
 import Image from "next/image.js";
-import { useRouter } from "next/router";
 
 const MobileMenu = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-  const router = useRouter();
+
   return (
     <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
       <Box sx={{ p: 2 }}>

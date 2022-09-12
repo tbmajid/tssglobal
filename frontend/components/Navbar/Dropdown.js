@@ -32,8 +32,13 @@ const Dropdown = ({ item }) => {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
-        onMouseOver={handleClick}
-        sx={{ my: 2, color: "#022366", fontWeight: "bold", display: "block" }}
+        // onMouseOver={handleClick}
+        sx={{
+          my: 2,
+          color: "#022366",
+          fontWeight: "bold",
+          display: "block",
+        }}
       >
         <nav className={item.submenu.some(active) ? "selected" : ""}>
           {item.title}
@@ -44,7 +49,8 @@ const Dropdown = ({ item }) => {
         anchorEl={anchorEl}
         open={open}
         onClose={handleCloseNavMenu}
-        MenuListProps={{ onMouseLeave: handleCloseNavMenu }}
+        // MenuListProps={{ onMouseLeave: handleCloseNavMenu }}
+        elevation={0}
       >
         {children.map((child, key) => (
           <MenuItem key={key} item={child} onClick={handleCloseNavMenu}>

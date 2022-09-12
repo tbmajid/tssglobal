@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Box, Grid } from "@mui/material";
 import PostSideBar from "../../components/Postsidebar";
 import SideContact from "../../components/Sidecontact";
+import ReactMarkdown from "react-markdown";
 
 const myPosts = () => {
   //Fetch Slug
@@ -27,11 +28,14 @@ const myPosts = () => {
         <Grid item xs={12} sm={12} md={6} sx={{ margin: 3 }}>
           <Box sx={{ typography: "h3", p: 2 }}>{title}</Box>
           <Box sx={{ typography: "body1", pl: 2 }}>{date}</Box>
-          <Box sx={{ typography: "body1", p: 2 }}>
-            {body}
-            <Box sx={{ pt: 2 }}>
-              <img src={media.data.attributes.formats.small.url} alt={title} />
-            </Box>
+          <Box sx={{ pt: 2 }}>
+            <img src={media.data.attributes.formats.small.url} alt={title} />
+          </Box>
+          <Box paragraph={true} sx={{ typography: "body1", p: 2 }}>
+            {" "}
+            <div className="post-body">
+              <ReactMarkdown>{body}</ReactMarkdown>
+            </div>
           </Box>
         </Grid>
         <Grid item xs={12} sm={12} md={3} sx={{ p: 2 }}>

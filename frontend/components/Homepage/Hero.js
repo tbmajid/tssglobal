@@ -4,6 +4,7 @@ import {
   BackgroundImage,
   BackgroundImageOverlay,
 } from "../../styles/Herostyle";
+import Link from "next/link";
 
 //import heroImage from "../public/images/hero.jpg";
 
@@ -27,36 +28,49 @@ const Hero = () => {
             }}
           >
             <Box>
-              <Button
-                variant="contained"
-                size="large"
-                sx={{
-                  mt: 2,
-                  color: "#4731d4",
-                  backgroundColor: "#cdf185",
-                  borderColor: "#fffff",
-                  p: 1,
-                  width: 200,
-                }}
-              >
-                Book an appointment
-              </Button>
+              {" "}
+              <Link href="/contact">
+                <Button
+                  variant="contained"
+                  size="large"
+                  sx={{
+                    mt: 2,
+                    color: "#4731d4",
+                    backgroundColor: "#cdf185",
+                    borderColor: "#fffff",
+                    p: 1,
+                    width: 200,
+                    borderRadius: 0,
+                    "&:hover": {
+                      color: "white",
+                    },
+                  }}
+                >
+                  Book an appointment
+                </Button>
+              </Link>
             </Box>
             <Box>
               {" "}
-              <Button
-                variant="outlined"
-                size="large"
-                sx={{
-                  color: "#ffffff",
-                  mt: 2,
-                  p: 1,
-                  width: 200,
-                  borderColor: "#ffffff",
-                }}
-              >
-                More Info
-              </Button>
+              <Link href="/services">
+                <Button
+                  variant="outlined"
+                  size="large"
+                  sx={{
+                    color: "#ffffff",
+                    mt: 2,
+                    p: 1,
+                    width: 200,
+                    borderColor: "#ffffff",
+                    borderRadius: 0,
+                    "&:hover": {
+                      backgroundColor: "#483ad1",
+                    },
+                  }}
+                >
+                  More Info
+                </Button>
+              </Link>
             </Box>
           </Box>{" "}
         </HeroStyle>

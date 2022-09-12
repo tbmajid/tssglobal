@@ -76,6 +76,7 @@ const NewsletterForm = ({ status, message, onValidated }) => {
           placeholder="Your email"
           className="mr-2"
           onKeyUp={(event) => handleInputKeyEvent(event)}
+          sx={{ borderRadius: 0 }}
         />
         <p>
           <Button
@@ -87,6 +88,11 @@ const NewsletterForm = ({ status, message, onValidated }) => {
               height: 40,
               color: "black",
               backgroundColor: "#cdf185",
+              borderRadius: 0,
+              "&:hover": {
+                color: "white",
+                backgroundColor: "#483ad1",
+              },
             }}
           >
             Join

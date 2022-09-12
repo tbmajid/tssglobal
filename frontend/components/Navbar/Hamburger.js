@@ -1,7 +1,9 @@
 import * as React from "react";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { Collapse, ExpandLess, ExpandMore } from "@mui/material";
+import { Collapse } from "@mui/material";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
@@ -28,12 +30,14 @@ const MenuItem = ({ item }) => {
 };
 
 const SingleLevel = ({ item }) => {
+  const router = useRouter();
   return (
     <ListItem button>
       <Link href={item.plink}>
         <ListItemText
           primary={item.title}
           sx={{ textTransform: "uppercase" }}
+          className={router.pathname == item.plink ? "selected" : ""}
         />
       </Link>
     </ListItem>
@@ -64,7 +68,10 @@ const MultiLevel = ({ item }) => {
         <List
           component="div"
           disablePadding
-          sx={{ color: "white", backgroundColor: "#022366" }}
+          sx={{
+            color: "white",
+            backgroundColor: "#022366",
+          }}
         >
           {children.map((child, key) => (
             <Link href={child.plink} key={key}>

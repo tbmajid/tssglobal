@@ -56,11 +56,15 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const searchClient = instantMeiliSearch("http://127.0.0.1:7700", "", {
-  placeholderSearch: false,
-  paginationTotalHits: 2,
-  primaryKey: "id",
-});
+const searchClient = instantMeiliSearch(
+  "https://p01--tss--search--tbma-49sk.code.run/",
+  process.env.NEXT_PUBLIC_MEILI_MASTER_KEY,
+  {
+    placeholderSearch: false,
+    paginationTotalHits: 2,
+    primaryKey: "id",
+  }
+);
 
 const SearchBox = ({ currentRefinement, refine }) => (
   <form noValidate action="" role="search">
