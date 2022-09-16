@@ -17,7 +17,14 @@ const SingleLevelMenu = ({ item }) => {
       sx={{ my: 2, color: "#022366", fontWeight: "bold", display: "block" }}
     >
       <Link href={item.plink}>
-        <div className={router.pathname == item.plink ? "selected" : ""}>
+        <div
+          className={
+            router.pathname == item.plink ||
+            router.pathname.startsWith(item.slink)
+              ? "selected"
+              : ""
+          }
+        >
           <a>{item.title}</a>
         </div>
       </Link>

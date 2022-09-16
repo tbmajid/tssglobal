@@ -5,7 +5,7 @@ const BespokeConsulation = () => {
   return (
     <div>
       <PageHero title="Bespoke Consultation" />
-      <Grid container md={8} justifyContent="center" sx={{ p: 6 }}>
+      <Grid container md={8} justifyContent="flex-start" sx={{ p: 6 }}>
         <Grid item>
           <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
             We understand that applying to foreign educational institutions is a

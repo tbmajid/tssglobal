@@ -40,7 +40,13 @@ const Dropdown = ({ item }) => {
           display: "block",
         }}
       >
-        <nav className={item.submenu.some(active) ? "selected" : ""}>
+        <nav
+          className={
+            router.pathname == item.plink || item.submenu.some(active)
+              ? "selected"
+              : ""
+          }
+        >
           {item.title}
         </nav>
       </Button>

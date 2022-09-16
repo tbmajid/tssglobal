@@ -46,7 +46,7 @@ const Hero = () => {
                     },
                   }}
                 >
-                  Book an appointment
+                  Get in touch
                 </Button>
               </Link>
             </Box>

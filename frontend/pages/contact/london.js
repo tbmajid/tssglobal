@@ -5,7 +5,7 @@ import ContactForm from "../../components/Contact";
 const London = () => {
   return (
     <div>
-      <PageHero title="Contact Us" />
+      <PageHero title="London" />
       <Grid container spacing={2} sx={{ p: 6 }}>
         <Grid item md={3} xs={12}>
           <Typography sx={{ fontWeight: "bold" }}>

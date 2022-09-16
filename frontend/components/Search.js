@@ -57,7 +57,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const searchClient = instantMeiliSearch(
-  "https://p01--tss--search--tbma-49sk.code.run/",
+  process.env.NEXT_PUBLIC_MELI_SERVER,
   process.env.NEXT_PUBLIC_MEILI_MASTER_KEY,
   {
     placeholderSearch: false,

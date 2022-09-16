@@ -28,7 +28,7 @@ const SideContact = () => {
       </CardContent>
       <CardActions>
         <Link href="/contact">
-          <Button size="small">Book an Appointment</Button>
+          <Button size="small">Send a Message</Button>
         </Link>
       </CardActions>
     </Card>

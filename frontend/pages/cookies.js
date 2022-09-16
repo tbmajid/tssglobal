@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 const Cookies = () => {
   return (
     <div>
-      <Box sx={{ typography: "h5", p: 1, margin: 2 }}>Cookies Policy</Box>
+      <Box sx={{ typography: "h5", p: 2, margin: 2 }}>Cookies Policy</Box>
       <Box sx={{ typography: "body1", p: 2, margin: 2 }}>
         This website uses Google Analytics to help analyse how visitors view
         this website. By using this website and agreeing to this policy, you
@@ -35,17 +35,17 @@ const Cookies = () => {
         specific cookies. You may also be able to set your browser to alert you
         every time a cookie is offered.
       </Box>
-      <Box sx={{ typography: "body1", p: 2, margin: 2 }}>
+      {/* <Box sx={{ typography: "body1", p: 2, margin: 2 }}>
         You can find out how to control and delete cookies on
-        <a href="www.aboutcookies.org.uk"> www.aboutcookies.org.uk</a>
-      </Box>
+        <a href="https://www.aboutcookies.org.uk">www.aboutcookies.org.uk</a>
+      </Box> */}
       <Box sx={{ typography: "body1", p: 2, margin: 2 }}>
         Most modern web browsers give you some control over cookies. You can set
         your web browser to accept or reject all cookies or to accept or reject
         specific cookies. You may also be able to set your browser to alert you
         every time a cookie is offered.
       </Box>{" "}
-      <Box sx={{ typography: "body1", p: 2, margin: 2 }}>
+      <Box sx={{ typography: "body1", p: 2, mb: 10 }}>
         We use both session and persistent cookies on our website. The names of
         the cookies that we use on our website, and the purposes for which they
         are used, are set out below:

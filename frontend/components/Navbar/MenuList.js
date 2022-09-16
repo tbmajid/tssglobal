@@ -38,6 +38,7 @@ export const myMenu = [
   {
     title: "Blog",
     plink: "/postlist",
+    slink: "/posts/",
   },
   {
     title: "Contact",

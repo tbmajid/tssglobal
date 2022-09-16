@@ -53,3 +53,20 @@ button:disabled {
 #basic-button a:hover {
   background-color: white;
 }
+
+.FooterNav a {
+  color: white;
+}
+
+.footer-padding {
+  padding-bottom: 0.5rem;
+  font-size: small;
+}
+
+.footer-text-small {
+  text-align: center;
+}
+
+.footer-text-large {
+  text-align: center;
+}
