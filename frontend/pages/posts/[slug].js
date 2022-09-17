@@ -6,7 +6,7 @@ import PostSideBar from "../../components/Postsidebar";
 import SideContact from "../../components/Sidecontact";
 import ReactMarkdown from "react-markdown";
 
-const myPosts = () => {
+const BlogPost = () => {
   //Fetch Slug
   const { query } = useRouter();
   //Fetch Graphql data
@@ -63,4 +63,4 @@ const myPosts = () => {
   );
 };
 
-export default myPosts;
+export default BlogPost;

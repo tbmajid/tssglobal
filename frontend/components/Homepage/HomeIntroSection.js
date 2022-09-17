@@ -80,11 +80,12 @@ const HomeIntro = () => {
             sx={{ typography: "body1", textAlign: "center" }}
           >
             <Box sx={{ fontStyle: "italic", fontWeight: "bold" }}>
-              "I had many doubts about whether I would actually spend a semester
-              abroad. I had never left the country and didn’t even own a
-              passport. I didn’t know where to start. TSS took this stress away
-              and made my semester in the UK possible. Having TSS’s support
-              really made me feel secure with my decision to go abroad.”
+              &quot;I had many doubts about whether I would actually spend a
+              semester abroad. I had never left the country and didn&#8242;t
+              even own a passport. I didn&#8242;t know where to start. TSS took
+              this stress away and made my semester in the UK possible. Having
+              TSS&#8242;s support really made me feel secure with my decision to
+              go abroad.&quot;
             </Box>
             <Box sx={{ typography: "subtitle2", mt: 2 }}>
               -Shaju Ahmed, Goldsmith, University of London
