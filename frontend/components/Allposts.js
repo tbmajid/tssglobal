@@ -12,7 +12,7 @@ const AllPosts = ({ post }) => {
         <Grid item>
           <Link href={`/posts/${slug}`}>
             <a>
-              <Typography variant="h3">{title}</Typography>
+              <Typography variant="h4">{title}</Typography>
             </a>
           </Link>
           <Typography variant="body1">{date}</Typography>

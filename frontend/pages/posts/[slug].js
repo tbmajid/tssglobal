@@ -25,10 +25,19 @@ const BlogPost = () => {
   return (
     <div>
       <Grid container spacing={2} justifyContent="space-between" sx={{ mb: 2 }}>
-        <Grid item xs={12} sm={12} md={6} sx={{ margin: 3 }}>
-          <Box sx={{ typography: "h3", p: 2 }}>{title}</Box>
+        <Grid item xs={10} sm={10} md={6} sx={{ margin: 3 }}>
+          <Box sx={{ typography: "h4", p: 2 }}>{title}</Box>
           <Box sx={{ typography: "body1", pl: 2 }}>{date}</Box>
-          <Box sx={{ pt: 2 }}>
+          {/* Small Devices */}
+          <Box sx={{ pt: 2, pl: 2, display: { xs: "block", md: "none" } }}>
+            <img
+              src={media.data.attributes.formats.small.url}
+              alt={title}
+              width={300}
+            />
+          </Box>
+          {/* Larger Devices */}
+          <Box sx={{ pt: 2, pl: 2, display: { xs: "none", md: "block" } }}>
             <img src={media.data.attributes.formats.small.url} alt={title} />
           </Box>
           <Box paragraph={true} sx={{ typography: "body1", p: 2 }}>
@@ -38,7 +47,7 @@ const BlogPost = () => {
             </div>
           </Box>
         </Grid>
-        <Grid item xs={12} sm={12} md={3} sx={{ p: 2 }}>
+        <Grid item xs={12} sm={10} md={3} sx={{ p: 2 }}>
           <Grid
             container
             spacing={2}

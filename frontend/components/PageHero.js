@@ -7,7 +7,7 @@ const PageHero = ({ title }) => {
         p: 8,
         color: "white",
         backgroundColor: "#2843b8",
-        typography: "h2",
+        typography: "h3",
       }}
     >
       {" "}

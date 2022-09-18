@@ -5,16 +5,16 @@ const BespokeConsulation = () => {
   return (
     <div>
       <PageHero title="Bespoke Consultation" />
-      <Grid container md={8} justifyContent="flex-start" sx={{ p: 6 }}>
-        <Grid item>
-          <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
+      <Grid container justifyContent="center" sx={{ p: 6 }}>
+        <Grid item xs={12} md={8}>
+          <Box sx={{ typography: "h6", p: 2 }}>
             We understand that applying to foreign educational institutions is a
             stressful process. It can be difficult to determine which programmes
             are strong in specific areas and how to choose the best match. TSS
             Global offers a bespoke consultation to help you make these
             difficult choices and support you through out the process.
           </Box>
-          <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
+          <Box sx={{ typography: "h6", p: 2 }}>
             Our consultant will help you gain a better understanding of courses,
             admission procedures, visa application process and other related
             topics. Our consultants usually have a master’s degree or above and
@@ -23,7 +23,7 @@ const BespokeConsulation = () => {
             We have helped many students gain admission to the schools of their
             choice, in particular the Russell Group universities
           </Box>
-          <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
+          <Box sx={{ typography: "h6", p: 2 }}>
             Our expert team will assist and support you in identifying the
             appropriate courses and institutes that are most appropriate to your
             potential and affordability. TSS Global not only assists students
@@ -35,13 +35,13 @@ const BespokeConsulation = () => {
             to meet the specific needs of each student.
           </Box>
 
-          <Box sx={{ typography: "h6", p: 2, margin: 2 }}>
+          <Box sx={{ typography: "h6", p: 2 }}>
             As you might be aware, there are various forms and levels of courses
             available in the United Kingdom, including a Foundation Programme,
             an Higher National Diploma (HND), an Undergraduate, a Postgraduate,
             and a research programme.
           </Box>
-          <Box sx={{ typography: "h6", p: 2, margin: 2, mb: 4 }}>
+          <Box sx={{ typography: "h6", p: 2, mb: 4 }}>
             Before you complete and submit an application for a specific
             institute, we will inform you about prospective courses, its
             requirements, application deadlines, and tuition fees, we will
