@@ -21,7 +21,6 @@ const Services = () => {
               letterSpacing: 5,
               textTransform: "uppercase",
               marginTop: 4,
-              ml: 3,
               p: 2,
             }}
           >

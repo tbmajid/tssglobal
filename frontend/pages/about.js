@@ -20,7 +20,7 @@ const about = () => {
                 letterSpacing: 5,
                 textTransform: "uppercase",
                 marginTop: 4,
-                ml: 3,
+
                 p: 2,
               }}
             >
@@ -77,7 +77,7 @@ const about = () => {
                 letterSpacing: 5,
                 textTransform: "uppercase",
                 marginTop: 4,
-                ml: 3,
+
                 p: 2,
               }}
             >
