@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Box from "@mui/material/Box";
 
-import { Drawer } from "@mui/material";
+import { Drawer, Typography } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import List from "@mui/material/List";
@@ -60,11 +60,14 @@ const MobileMenu = () => {
         ></List>
         <HamburgerMenu handleDrawerClick={handleDrawerClick} />{" "}
       </Drawer>
+
       <IconButton
         sx={{ color: "black", marginLeft: "auto" }}
         onClick={handleDrawerClick}
       >
-        <MenuIcon color="white" />
+        <Typography variant="h6">MENU</Typography>
+
+        <MenuIcon color="white" fontSize="large" />
       </IconButton>
     </Box>
   );
