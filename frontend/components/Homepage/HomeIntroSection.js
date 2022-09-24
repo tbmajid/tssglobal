@@ -2,7 +2,7 @@ import * as React from "react";
 import { Grid, useMediaQuery, Typography, Box } from "@mui/material";
 import MinimizeIcon from "@mui/icons-material/Minimize";
 import Image from "next/image";
-import { DropShadow } from "../../styles/HPGrid";
+import { DropShadow } from "../../styles/GlobalStyled";
 const HomeIntro = () => {
   const largeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
   return (
@@ -16,7 +16,7 @@ const HomeIntro = () => {
           letterSpacing: 5,
           textTransform: "uppercase",
           marginTop: 4,
-          ml: 3,
+          ml: 2,
           p: 2,
         }}
       >
@@ -29,16 +29,16 @@ const HomeIntro = () => {
         aligItem={largeScreen ? "space-between" : "center"}
         justifyContent={largeScreen ? "space-between" : "center"}
         spacing={2}
-        sx={{ p: 2, ml: 2 }}
+        sx={{ p: 2 }}
         wrap="wrap"
       >
-        <Grid item xs={8} sx={{ p: 4, alignItems: "center" }}>
-          <Typography variant="h4" component="h2" sx={{ pl: 4 }}>
+        <Grid item xs={8} xl={6} sx={{ pl: 2, p: 2, alignItems: "center" }}>
+          <Typography variant="h4" component="h2" sx={{ ml: 2 }}>
             We are certified student advisors trained by British Council
           </Typography>
           <br />
 
-          <Box sx={{ typography: "h6", pl: 4 }}>
+          <Box sx={{ typography: "h6", ml: 2 }}>
             Our students are based across the UK and benefit from our unique
             contacts within the various institutions, letting agents and
             recruitment agencies; our ability to assist with potential issues
@@ -63,7 +63,7 @@ const HomeIntro = () => {
 
       <Grid container justifyContent={largeScreen ? "flex-end" : "center"}>
         <Box sx={{ maxWidth: 875, margin: 4 }}>
-          <Grid item xs={1} md={1} sx={{ alignSelf: "end" }}>
+          <Grid item xs={3} md={1} sx={{ justifySelf: "end" }}>
             {" "}
             <Image
               src="https://res.cloudinary.com/tabim/image/upload/v1662923449/sakib_a3h1km.png"

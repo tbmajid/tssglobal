@@ -1,7 +1,6 @@
 import Link from "next/link";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { Grid, Typography, Box } from "@mui/material";
-import { HoverColor } from "../styles/HPGrid";
 
 const Posts = ({ post }) => {
   //Get data from props

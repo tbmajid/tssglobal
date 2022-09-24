@@ -61,27 +61,27 @@ const Footer = () => {
               <Box sx={{ pb: 2 }}> Quick Links</Box>
 
               <ul>
-                <li className="footer-padding">
+                <li>
                   <Link href="/about">
                     <a>About us</a>
                   </Link>{" "}
                 </li>
-                <li className="footer-padding">
+                <li>
                   <Link href="/services">
                     <a>Services</a>
                   </Link>{" "}
                 </li>
-                <li className="footer-padding">
+                <li>
                   <Link href="/postlist">
                     <a>Blog</a>
                   </Link>{" "}
                 </li>{" "}
-                <li className="footer-padding">
+                <li>
                   <Link href="/contact">
                     <a>Contact us</a>
                   </Link>{" "}
                 </li>
-                <li className="footer-padding">
+                <li>
                   <Link href="/career">
                     <a>Career</a>
                   </Link>{" "}
@@ -103,7 +103,7 @@ const Footer = () => {
               <Box sx={{ pb: 2 }}> Services</Box>
 
               <ul>
-                <li className="footer-padding">
+                <li>
                   <Link href="/services/bespoke-consultation">
                     <a>Bespoke Consultation</a>
                   </Link>{" "}
@@ -118,18 +118,18 @@ const Footer = () => {
                     <a>Student Visa Support</a>
                   </Link>{" "}
                 </li>{" "}
-                <li className="footer-padding">
+                <li>
                   <Link href="/services/ielts-coaching">
                     <a>IELTS Preparation</a>
                   </Link>{" "}
                 </li>
-                <li className="footer-padding">
+                <li>
                   <Link href="/services/personal-statement-editing-service">
                     <a>Personal Statement Editing</a>
                   </Link>{" "}
                 </li>
-                <li className="footer-padding">
-                  <Link href="/services/post-arrival-support">
+                <li>
+                  <Link href="/services/post-arrival-support" scroll>
                     <a>Post Arrival Support</a>
                   </Link>{" "}
                 </li>

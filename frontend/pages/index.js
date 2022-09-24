@@ -10,8 +10,8 @@ import { POST_QUERY } from "../lib/query";
 import Posts from "../components/Posts";
 
 import Hero from "../components/Homepage/Hero";
-import Homecontent from "../components/Homepage/Homepagemain";
-import { PostGrid } from "../styles/HPGrid";
+import HeroCards from "../components/Homepage/HeroCards";
+import { PostGrid } from "../styles/GlobalStyled";
 import MinimizeIcon from "@mui/icons-material/Minimize";
 import HomeIntro from "../components/Homepage/HomeIntroSection";
 import WhyUs from "../components/Homepage/WhyUs";
@@ -30,7 +30,7 @@ const Home = () => {
     <div>
       <Hero />
 
-      <Homecontent />
+      <HeroCards />
       <HomeIntro />
       <Box sx={{ my: 4 }}>
         {" "}
@@ -50,7 +50,7 @@ const Home = () => {
           <MinimizeIcon fontSize="small" />
           Latest From Our Blog
         </Typography>
-        <Typography variant="body1" component="h1" gutterBottom sx={{ ml: 3 }}>
+        <Typography variant="body1" component="h1" gutterBottom sx={{ ml: 2 }}>
           <PostGrid>
             {posts.map((post) => (
               <Posts key={post.id} post={post} />

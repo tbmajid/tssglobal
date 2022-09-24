@@ -88,7 +88,7 @@ const about = () => {
           </Grid>
 
           <Grid item md={4} xs={12} sx={{ p: 2, pl: 4 }}>
-            <Typography variant="h6">
+            <Box sx={{ typography: "h6" }}>
               <ul>
                 <li>1. Always by your side</li>
                 <li>2. Satisfaction of our customers</li>
@@ -97,7 +97,7 @@ const about = () => {
                 <li>5. The best free assistance</li>
                 <li>6. Best price guaranteed</li>
               </ul>
-            </Typography>
+            </Box>
           </Grid>
         </Grid>
         <Grid item md={8}>

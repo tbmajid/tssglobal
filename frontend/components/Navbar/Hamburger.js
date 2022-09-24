@@ -12,11 +12,13 @@ import { myMenu } from "./MenuList";
 import { ChildrenDetect } from "./utils";
 import { SubCheck } from "./Subcheck.js";
 
-const HamburgerMenu = () => {
-  return myMenu.map((item, key) => <MenuItem key={key} item={item} />);
+const HamburgerMenu = ({ handleDrawerClick }) => {
+  return myMenu.map((item, key) => (
+    <MenuItem key={key} item={item} handleDrawerClick={handleDrawerClick} />
+  ));
 };
 
-const MenuItem = ({ item }) => {
+const MenuItem = ({ item, handleDrawerClick }) => {
   let Component;
   if (ChildrenDetect(item)) {
     Component = MultiLevel;
@@ -26,10 +28,10 @@ const MenuItem = ({ item }) => {
     Component = SingleLevel;
   }
 
-  return <Component item={item} />;
+  return <Component item={item} handleDrawerClick={handleDrawerClick} />;
 };
 
-const SingleLevel = ({ item }) => {
+const SingleLevel = ({ item, handleDrawerClick }) => {
   const router = useRouter();
   return (
     <ListItem button>
@@ -38,13 +40,14 @@ const SingleLevel = ({ item }) => {
           primary={item.title}
           sx={{ textTransform: "uppercase" }}
           className={router.pathname == item.plink ? "selected" : ""}
+          onClick={handleDrawerClick}
         />
       </Link>
     </ListItem>
   );
 };
 
-const MultiLevel = ({ item }) => {
+const MultiLevel = ({ item, handleDrawerClick }) => {
   const { submenu: children } = item;
   const [open, setOpen] = useState(false);
 
@@ -72,6 +75,7 @@ const MultiLevel = ({ item }) => {
             color: "white",
             backgroundColor: "#022366",
           }}
+          onClick={handleDrawerClick}
         >
           {children.map((child, key) => (
             <Link href={child.plink} key={key}>
@@ -84,7 +88,7 @@ const MultiLevel = ({ item }) => {
   );
 };
 
-const DoubleLevel = ({ item }) => {
+const DoubleLevel = ({ item, handleDrawerClick }) => {
   const { submenu: children } = item;
   const [open, setOpen] = useState(false);
 
@@ -109,6 +113,7 @@ const DoubleLevel = ({ item }) => {
           component="div"
           disablePadding
           sx={{ color: "white", backgroundColor: "#022366" }}
+          onClick={handleDrawerClick}
         >
           {children.map((child, key) => (
             <MenuItem key={key} item={child} />

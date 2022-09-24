@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { decode } from "html-entities";
-import { TextField, Button, Box, Typography } from "@mui/material";
+import { Button, Box, Typography } from "@mui/material";
 
 const NewsletterForm = ({ status, message, onValidated }) => {
   const [error, setError] = useState(null);

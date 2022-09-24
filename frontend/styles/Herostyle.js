@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HeroStyle = styled.div`
-  padding: 2rem;
+  padding: 4rem;
   color: #ffff;
 `;
 
@@ -11,16 +11,23 @@ export const BackgroundImage = styled.div`
 
   background-size: cover;
   overflow: hidden;
-  max-width: 1300px;
+
   z-index: 0;
-  /* opacity: 0.6; */
-  /* background-color: #253ebb;
-  background-blend-mode: multiply; */
 `;
 
 export const BackgroundImageOverlay = styled.div`
   background: rgba(40, 67, 184, 0.82);
   overflow: hidden;
-  max-width: 1300px;
   z-index: 2;
+`;
+
+export const HeroTextCards = styled.div`
+  background-color: ${({ bgColor }) => bgColor};
+  color: ${({ color }) => color};
+  border-width: 0.8rem 0.8rem 0.8rem 0.8rem;
+  border-style: solid;
+  border-color: #ffffff;
+  padding: 1rem;
+  word-wrap: break-word;
+  height: 10rem;
 `;

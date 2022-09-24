@@ -6,7 +6,7 @@ import MenuBookIcon from "@mui/icons-material/MenuBook";
 import SearchIcon from "@mui/icons-material/Search";
 import HouseIcon from "@mui/icons-material/House";
 import MinimizeIcon from "@mui/icons-material/Minimize";
-import { WhyUsGrid } from "../../styles/HPGrid";
+import { WhyUsGrid } from "../../styles/GlobalStyled";
 import Link from "next/link";
 const WhyUs = () => {
   return (

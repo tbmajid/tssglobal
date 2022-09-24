@@ -20,7 +20,9 @@ import Image from "next/image.js";
 
 const MobileMenu = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
-
+  const handleDrawerClick = () => {
+    setOpenDrawer(!openDrawer);
+  };
   return (
     <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
       <Box sx={{ p: 2 }}>
@@ -44,7 +46,7 @@ const MobileMenu = () => {
       >
         <Button
           size="medium"
-          onClick={() => setOpenDrawer(!openDrawer)}
+          onClick={handleDrawerClick}
           sx={{ marginLeft: "auto" }}
         >
           <CloseIcon />
@@ -56,11 +58,11 @@ const MobileMenu = () => {
             minWidth: 300,
           }}
         ></List>
-        <HamburgerMenu />{" "}
+        <HamburgerMenu handleDrawerClick={handleDrawerClick} />{" "}
       </Drawer>
       <IconButton
         sx={{ color: "black", marginLeft: "auto" }}
-        onClick={() => setOpenDrawer(!openDrawer)}
+        onClick={handleDrawerClick}
       >
         <MenuIcon color="white" />
       </IconButton>

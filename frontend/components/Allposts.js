@@ -12,11 +12,16 @@ const AllPosts = ({ post }) => {
         <Grid item>
           <Link href={`/posts/${slug}`}>
             <a>
-              <Typography variant="h4">{title}</Typography>
+              <Typography variant="h4" sx={{ pb: 1 }}>
+                {title}
+              </Typography>
             </a>
           </Link>
           <Typography variant="body1">{date}</Typography>
-          <Typography variant="h6"> {description}</Typography>
+          <Typography variant="h6" sx={{ pt: 2 }}>
+            {" "}
+            {description}
+          </Typography>
         </Grid>
         <Grid item>
           {" "}

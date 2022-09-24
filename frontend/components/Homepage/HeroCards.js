@@ -1,14 +1,13 @@
-import * as React from "react";
 import { Grid, useMediaQuery, Typography } from "@mui/material";
 import SchoolIcon from "@mui/icons-material/School";
 import ApprovalIcon from "@mui/icons-material/Approval";
 import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 
-import { Address, PhoneEmail, OpeningHours } from "../../styles/HPGrid";
-const Homecontent = () => {
+import { HeroTextCards } from "../../styles/Herostyle";
+const HeroCards = () => {
   const largeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
   return (
-    <React.Fragment>
+    <>
       {" "}
       <Grid
         container
@@ -18,7 +17,7 @@ const Homecontent = () => {
         spacing={largeScreen ? 3 : 0}
         sx={{ p: 1 }}
       >
-        <Address>
+        <HeroTextCards bgColor="#4731d4" color="#FFFFFF">
           <Grid item xs={12} minWidth="18rem">
             {" "}
             <Grid
@@ -39,8 +38,8 @@ const Homecontent = () => {
               </Grid>
             </Grid>
           </Grid>
-        </Address>
-        <PhoneEmail>
+        </HeroTextCards>
+        <HeroTextCards bgColor="#cdf185" color="#000000">
           <Grid item xs={12} minWidth="18rem">
             {" "}
             <Grid
@@ -61,8 +60,8 @@ const Homecontent = () => {
               </Grid>
             </Grid>
           </Grid>
-        </PhoneEmail>
-        <OpeningHours>
+        </HeroTextCards>
+        <HeroTextCards bgColor="#253ebb" color="#FFFFFF">
           <Grid item xs={12} minWidth="18rem">
             {" "}
             <Grid
@@ -82,11 +81,11 @@ const Homecontent = () => {
               </Grid>
             </Grid>
           </Grid>
-        </OpeningHours>
+        </HeroTextCards>
       </Grid>
       {/* Welcome Text */}
-    </React.Fragment>
+    </>
   );
 };
 
-export default Homecontent;
+export default HeroCards;
