@@ -1,4 +1,3 @@
-import * as React from "react";
 import { Grid, useMediaQuery, Typography, Box } from "@mui/material";
 import MinimizeIcon from "@mui/icons-material/Minimize";
 import Image from "next/image";
@@ -6,7 +5,7 @@ import { DropShadow } from "../../styles/GlobalStyled";
 const HomeIntro = () => {
   const largeScreen = useMediaQuery((theme) => theme.breakpoints.up("md"));
   return (
-    <React.Fragment>
+    <>
       <Typography
         variant="h5"
         component="h2"
@@ -17,7 +16,6 @@ const HomeIntro = () => {
           textTransform: "uppercase",
           marginTop: 4,
           ml: 2,
-          p: 2,
         }}
       >
         <MinimizeIcon fontSize="small" />
@@ -93,7 +91,7 @@ const HomeIntro = () => {
           </Grid>
         </Box>
       </Grid>
-    </React.Fragment>
+    </>
   );
 };
 

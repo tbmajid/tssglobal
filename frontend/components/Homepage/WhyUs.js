@@ -29,7 +29,7 @@ const WhyUs = () => {
         Why Us
       </Typography>
       <Box
-        sx={{ color: "white", backgroundColor: "#4731d4", marginTop: 4, p: 4 }}
+        sx={{ color: "white", backgroundColor: "#4731d4", marginTop: 2, p: 4 }}
       >
         <WhyUsGrid>
           <Grid item sx={{ border: 1, p: 4 }}>
