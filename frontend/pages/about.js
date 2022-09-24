@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import OurMission from "../components/Mission";
 import MinimizeIcon from "@mui/icons-material/Minimize";
-import { DropShadow } from "../styles/HPGrid";
+import { DropShadow } from "../styles/GlobalStyled";
 const about = () => {
   return (
     <div>
